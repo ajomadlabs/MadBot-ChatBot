@@ -26,4 +26,4 @@ MadBot is a simple bot which is developed as an assistance in Slack Group
   Open the config file and place this API token<br> 
 <hr>
 # Credits
-  This neural network is created as hobby project inspiring <a href="https://github.com/scriptonist">Scriptonist</a>
+  This Bot is created as hobby project inspiring <a href="https://github.com/scriptonist">Scriptonist</a>
