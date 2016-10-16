@@ -110,27 +110,29 @@ function wishUS(){
 //	This hears the message send by users
 //--------------------------------------------
 
-controller.hears(["hey","Hey, MadBot", "Who is your father","father", "quote", "date", "time", "good morning", "good afternoon", "good evening", "bye", /^.{0,}mad.{0,}$/],					    ["direct_message","direct_mention","mention","ambient"],
+controller.hears(["hey","!Hey, chappie", "!Who is your father","!father", "!quote", "!date", "!time", "!good morning", "!good afternoon", "!good evening", "!change", "!bye", /^.{0,}mad.{0,}$/],					    ["direct_message","direct_mention","mention","ambient"],
 		function(bot,message){
 
   
 
 	console.log(message);
-	if(message.text === "Hey, MadBot" || message.text === "hey"){
-		bot.reply(message,"Hello, May I help you");
+	if(message.text === "!Hey, chappie" || message.text === "hey" || message.text === '!' || message.text === "chappie" || message.text === "CHAPPIE"){
+		bot.reply(message,"Hello, May I help you,If you want me to do something call me or command me using !");
 	}
-	else if(message.text === "Who is your father" || message.text === "father"){
+	else if(message.text === "!mother" || message.text === "!father"){
 		bot.reply(message,"Well, my creator is MadLabs! Its pretty awsome to be with them");}
-	else if(message.text === "quote"){
+	else if(message.text === "!quote"){
 		bot.reply(message,showQuotation());}
-	else if(message.text === "date" || message.text === "time"){
+	else if(message.text === "!date" || message.text === "!time"){
 		bot.reply(message,showDate());}
-	else if(message.text === "good morning" || message.text === "good afternoon" || message.text === "good afternoon"){
+	else if(message.text === "!good morning" || message.text === "!good afternoon" || message.text === "!good evening"){
 		bot.reply(message,wishUS());}
-	else if(message.text === "bye"){
+	else if(message.text === "!bye"){
 		bot.reply(message,"Hope we will meet soon");}
+	else if(message.text === "!change"){
+		bot.reply(message,"Im okey withe any changes that my creators want me to");}
 	else{
-		bot.reply(message,"Sorry! My creators are still developing me");}
+		bot.reply(message,"!Sorry! My creators are still developing me");}
 
 });
 
